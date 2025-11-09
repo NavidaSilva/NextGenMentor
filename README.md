@@ -2,16 +2,27 @@
 ```bash
 docker compose up --build
 
-**Automated Mentor - Mentee Matching:**
-Developed a intelligent matching algorithm using SentenceTransformers & cosine similarity to semantically pair mentors & mentees based on research
-interests, expertise, & availability, with a weighted scoring system
-**User Management:**
-Designed separate flows for mentors, mentees, & administrators with Google OAuth integration & JWT-based authentication.
-**Real-Time Communication:**
-Built a chat system using Socket.io & integrated Google meetings for virtual mentorship sessions.
-**Feedback & Evaluation:** 
-Added mentor rating dropdowns, feedback submission, & progress milestone tracking.
-**Report Generation**
-Enabled PDF/CSV export of mentorship data & performance analytics for administrators and stakeholders.
-**Admin Controls:**
-Developed manual re-matching, user verification, & dashboard comparison features to monitor mentee performance
+🌟 Features Overview
+🤝 Automated Mentor–Mentee Matching
+
+Developed an intelligent matching algorithm using SentenceTransformers and cosine similarity to semantically pair mentors and mentees based on research interests, expertise, and availability — with a weighted scoring system for improved accuracy.
+
+👥 User Management
+
+Designed distinct user flows for mentors, mentees, and administrators with Google OAuth integration and JWT-based authentication.
+
+💬 Real-Time Communication
+
+Built a chat system using Socket.io, and integrated Google Meet for seamless virtual mentorship sessions.
+
+📝 Feedback & Evaluation
+
+Implemented mentor rating options, feedback submissions, and progress milestone tracking for mentees.
+
+📊 Report Generation
+
+Enabled PDF/CSV export of mentorship data and performance analytics for administrators and stakeholders.
+
+🛠️ Admin Controls
+
+Developed tools for manual re-matching, user verification, and dashboard performance comparison to monitor and optimize mentorship outcomes.
