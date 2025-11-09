@@ -1,7 +1,4 @@
-# MentorMentee Platform
-
-A full-stack **Mentor-Mentee Management System** that intelligently matches mentors and mentees, enables real-time communication, and provides admin-level analytics and reporting.  
-Built with **React**, **Node.js**, **MongoDB**, and an **AI-driven backend** using **SentenceTransformers**.
+# NextGenMentor MentorMentee Platform
 
 ---
 
