@@ -1,0 +1,275 @@
+.chatContainer {
+    width: 100vw;
+    height: 94vh;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    background: linear-gradient(135deg, #4caf50 0%, #d4f6dc 100%);
+    box-shadow: none;
+    color: #2e7d32;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chatContainer h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #1b5e20;
+}
+
+.chatContainer .messageList {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+    border-radius: 0;
+    background-color: #e6f2e6;
+    box-shadow: inset 0 0 8px rgba(0, 128, 0, 0.2);
+}
+
+.chatContainer .messageItem {
+    max-width: 75%;
+    margin: 0.25rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+    box-shadow: 1px 1px 5px rgba(76, 175, 80, 0.3);
+    background-color: #d4f6dc;
+    color: #1b5e20;
+    clear: both;
+    transition: transform 0.2s;
+}
+
+.chatContainer .messageItem.sent {
+    background-color: #4caf50;
+    color: white;
+    margin-left: auto;
+    box-shadow: 1px 1px 10px rgba(76, 175, 80, 0.5);
+}
+
+.chatContainer .messageItem.received {
+    background-color: #d4f6dc;
+    color: #1b5e20;
+    margin-right: auto;
+}
+
+.chatContainer .inputArea {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+.chatContainer .inputField {
+    flex-grow: 1;
+    border-radius: 20px;
+    border: 1px solid #4caf50;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(76, 175, 80, 0.3);
+}
+
+.chatContainer .inputField:focus {
+    box-shadow: 0 0 12px #4caf50;
+    border-color: #2e7d32;
+}
+
+.chatContainer .sendButton {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.chatContainer .sendButton:hover:not(:disabled) {
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+.chatContainer .sendButton:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+}
+
+.chatContainer .endSessionButton {
+    margin-top: 1rem;
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: 700;
+    border-radius: 25px;
+    border: none;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.chatContainer .endSessionButton:hover {
+    background-color: #ff1a1a;
+}
+
+.chatContainer .sessionEndedMsg {
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.sessionNotice {
+    text-align: center;
+    color: #ff6b6b;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+
+.ratingBox {
+    margin-top: 1.5rem;
+    text-align: center;
+    background: #ffffffbb;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 128, 0, 0.2);
+}
+
+.ratingBox p {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.starFilled {
+    color: #ffc107; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.starFilled:hover {
+    transform: scale(1.2);
+}
+
+.starEmpty {
+    color: #c8e6c9; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.starEmpty:hover {
+    transform: scale(1.2);
+    color: #ffeb3b;
+}
+
+.submitRatingBtn {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitRatingBtn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+}
+
+.submitRatingBtn:hover:not(:disabled) {
+    background-color: #43a047;
+}
+
+.thankYou {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #388e3c;
+    text-align: center;
+}
+
+.exitButton {
+    margin-top: 1.5rem;
+    background-color: #ff9800;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.exitButton:hover {
+    background-color: #fb8c00;
+    transform: scale(1.05);
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.modalContent h3 {
+    margin-bottom: 1rem;
+    color: #2e7d32;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.cancelRatingBtn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cancelRatingBtn:hover {
+    background-color: #ff1a1a;
+}

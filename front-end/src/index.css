@@ -1,0 +1,258 @@
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* Hero Section (two-column layout) */
+.landing-hero {
+  display: flex;               /* enables two-column */
+  align-items: center;         /* vertically center content */
+  justify-content: space-between; /* space between text and image */
+  gap: 2rem;                   /* space between columns */
+  margin-bottom: 2rem;
+  text-align: left;            /* left align text now */
+}
+
+.hero-text {
+  flex: 1;                     /* text takes one column */
+  text-align: center;
+}
+
+.hero-image {
+  flex: 1;                     /* image takes one column */
+  display: flex;
+  justify-content: center;     /* center image inside its column */
+}
+
+.landingimage {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;           /* keep it neat */
+}
+
+
+.landing-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #5fcf80;
+}
+
+
+.headingmentor {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #5fcf80;
+}
+
+
+.landing-hero p {
+  font-size: 1rem;
+  color: #636e72;
+}
+
+/* Auth Options Grid */
+.auth-options {
+  width:100%;
+  display: block;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+/* Login & Signup Sections */
+.login-section, .signup-section {
+  flex: 1;
+  width: 40%;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.login-section:hover, .signup-section:hover {
+  transform: translateY(-5px);
+}
+
+h2, h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #5fcf80;
+}
+
+
+/* Role Cards */
+.role-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.role-card {
+  background: #ecf0f1;
+  padding: 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  background-color: #dfe6e9;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.role-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+
+
+.mentor-signup {
+  background-color: #f5f7fa;
+  padding: 2rem 0;
+}
+
+.modern-form h4 {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.MuiPaper-root {
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.MuiButton-contained {
+  background-color: #1976d2;
+  text-transform: none;
+}
+
+
+/*mentor-signup  login new topic  */
+
+.auth-container, .mentor-signup , .mentee-signup, .topicSelection {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.auth-container h1, p , .topicSelection{
+  text-align: center;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, select, textarea {
+  padding: 12px 14px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #409eff;
+  box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.2);
+  outline: none;
+}
+
+/* Labels and Fields */
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Radio & Checkbox Section */
+.form-section {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.form-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.MuiFormControlLabel-root {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+
+/* Divider */
+.auth-divider {
+  margin: 30px 0;
+  text-align: center;
+  position: relative;
+}
+
+.auth-divider span {
+  background: #fff;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+  color: #999;
+  font-size: 14px;
+}
+
+.auth-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ddd;
+  z-index: 0;
+}
+
+
+
+/* Dashboard Styles */
+.dashboard {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+/* Card Styles */
+.MuiPaper-root {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Session Card */
+.session-card {
+  transition: transform 0.2s;
+}
+
+.session-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1) !important;
+}

@@ -1,0 +1,116 @@
+.help-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.help-card {
+  position: relative;
+  background-color: white;
+  border-radius: 8px; 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1024px; 
+  width: 100%;
+  padding: 40px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.help-title {
+  width: 100%;
+  text-align: center;
+  font-size: 30px; 
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px; 
+}
+
+.help-subtitle {
+  width: 100%;
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 40px; 
+  font-size: 16px; 
+}
+
+.faq-section,
+.contact-section {
+  flex: 1 1 300px;
+  min-width: 300px;
+}
+
+.faq-title,
+.contact-title {
+  font-size: 24px; 
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 16px; 
+}
+
+.faq-list {
+  list-style-type: disc;
+  padding-left: 20px; 
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.faq-list li {
+  margin-bottom: 12px; 
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 16px; 
+  padding: 12px; 
+  border: 1px solid #d1d5db;
+  border-radius: 6px; 
+  font-size: 16px; 
+  color: #374151;
+  resize: vertical;
+  font-family: inherit;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  background-color: white;
+}
+
+.contact-form textarea {
+  min-height: 100px; 
+}
+
+.submit-button {
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: darkgreen;
+}

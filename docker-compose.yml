@@ -1,0 +1,67 @@
+
+services:
+  mongo:
+    image: mongo:8.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  backend:
+    build: ./back-end
+    ports:
+      - "5000:5000"
+    environment:
+      - AI_BACKEND_URL=http://ai-backend:8000
+      - NODE_ENV=production
+      - PORT=5000
+      - MONGO_URI=mongodb://mongo:27017/mentormentee
+      - FRONTEND_URL=http://localhost:3000  # Use localhost for host access
+      - GOOGLE_CLIENT_ID=464903498148-u857uqkhvhm38kaccf13urqggft072j6.apps.googleusercontent.com
+      - GOOGLE_CLIENT_SECRET=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
+      - GOOGLE_REDIRECT_URI=http://localhost:5000/auth/google/callback
+      - JWT_SECRET=c9d217504bdd9f09474735e970e67dbf85bc1a0628889ef28e2bbb357992efeeaa0419edfdb79fbcf13f61855764056c143cb2752082b7626dc34bf0b76caa8f
+    depends_on:
+      mongo:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  ai-backend:
+    build: ./back-end/AI
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mentormentee
+      - FRONTEND_URL=http://localhost:3000  # Use localhost for host access
+
+    depends_on:
+      mongo:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  frontend:
+    build: ./front-end
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+      - ai-backend
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:
+
+networks:
+  app-network:

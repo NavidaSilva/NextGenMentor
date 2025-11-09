@@ -1,0 +1,69 @@
+/* Badge popup styles */
+.badge-popup-overlay {
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.badge-popup-content {
+  animation: slideUp 0.3s ease-out;
+  transform-origin: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.badge-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.badge-icon {
+  transition: all 0.3s ease;
+}
+
+.badge-card:hover .badge-icon {
+  transform: scale(1.1);
+}
+
+.badge-earned {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+
+.badge-not-earned {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border: 2px solid #e5e7eb;
+}
+
+.badge-popup-close {
+  transition: all 0.2s ease;
+}
+
+.badge-popup-close:hover {
+  transform: scale(1.1);
+  color: #ef4444;
+}
+

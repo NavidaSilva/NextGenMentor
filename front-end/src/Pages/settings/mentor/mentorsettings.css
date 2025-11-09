@@ -1,0 +1,64 @@
+.settings-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9fafb; 
+}
+
+/* Sidebar styling */
+.settings-sidebar {
+  width: 256px; 
+  background-color: #89bf83;
+  border-right: 1px solid #e5e7eb; 
+  padding: 24px; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar header */
+.settings-sidebar h2 {
+  font-size: 40px; 
+  font-weight: 700; 
+  margin-bottom: 32px; 
+  color: #02261c; /
+}
+
+/* Nav container */
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+}
+
+/* Buttons style */
+.settings-nav button {
+  text-align: left;
+  padding: 12px 16px; 
+  border-radius: 6px; 
+  font-weight: 700; 
+  color: #052019;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover state */
+.settings-nav button:hover {
+  background-color: #085c30;
+  color: #ffffff;
+}
+
+/* Selected button */
+.settings-nav button.selected {
+  background-color: #085c30;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(22, 163, 74, 0.5); 
+}
+
+/* Main content area */
+.settings-main {
+  flex: 1;
+  overflow: auto;
+  padding: 32px;
+  background-color: #ffffff;
+}

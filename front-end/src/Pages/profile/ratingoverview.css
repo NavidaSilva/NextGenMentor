@@ -1,0 +1,41 @@
+.rating-overview-card {
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.rating-overview-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.rating-score {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.out-of {
+  font-size: 1rem;
+  color: #888;
+  margin-left: 0.25rem;
+}
+
+.stars {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #f6c300;
+}
+
+.star.empty {
+  color: #ddd;
+}
+
+.total-ratings {
+  font-size: 0.9rem;
+  color: #666;
+}
